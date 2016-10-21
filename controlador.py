@@ -22,10 +22,10 @@ while(game==1):
         else:
             o=2
     if(aux=='user'):
-        print('Choose your first movement, first the Y coordinate then the X coordinate')
+        print('Choose your first movement, first the X coordinate then the Y coordinate')
         x=input()
         y=input()
-        Matrix=movement(x,y,"o",Matrix)
+        Matrix=movement(y-1,x-1,"o",Matrix)
         printMatrix(Matrix)
         turn="x"
     else:
@@ -45,15 +45,15 @@ while(game==1):
         elif(turn=="x"):
             print("The computer moves")
             aux=analyzeMatrix(Matrix)
-            
+
             Matrix=movement(aux[0],aux[1],"x",Matrix)
             printMatrix(Matrix)
             turn="o"
         else:
-            print("Choose your next movement, first the y coordinate then the x coordinate")
+            print("Choose your next movement, first the X coordinate then the Y coordinate")
             x=input()
             y=input()
-            Matrix=movement(x,y,"o",Matrix)
+            Matrix=movement(y-1,x-1,"o",Matrix)
             printMatrix(Matrix)
             turn="x"
 
