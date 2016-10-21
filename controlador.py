@@ -27,4 +27,5 @@ while(game==1):
     	print('The computer does his movement')
     	Matrix=movement(1,1,"x",Matrix)
     	print(Matrix)
+    
 

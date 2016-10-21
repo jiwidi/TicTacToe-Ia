@@ -12,3 +12,4 @@ def printMatrix(matrix):
     print(matrix[0]+"\n")
     print(matrix[1]+"\n")
     print(matrix[2]+"\n")
+
