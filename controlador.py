@@ -4,6 +4,7 @@ from functions import getValue
 from functions import analyzeMatrix
 from functions import isComplete
 from functions import getValue
+
 w=3
 h=3 
 Matrix = [['-' for x in range(w)] for y in range(h)] 

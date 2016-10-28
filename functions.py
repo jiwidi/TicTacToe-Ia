@@ -13,26 +13,6 @@ def printMatrix(matrix):
     print(matrix[1])
     print(matrix[2])
 
-def duplicates(lst, item):
-	resulTO=[]
-	if(lst[0] is item):
-		resulTO.append(0)
-	if(lst[1] is item):
-		resulTO.append(1)
-	if(lst[2] is item):
-		resulTO.append(2)
-	return resulTO
-def getEmptyPos(lst):
-	print("hola")
-	print(len(lst))
-	if(0 in lst and 1 in lst and 2 in lst):
-		return -1
-	elif(0 in lst and 1 in lst):
-		return 2
-	elif(0 in lst and 2 in lst):
-		return 1
-	elif(1 in lst and 2 in lst):
-		return 0	
 def getValue(x,y,matrix):
 	result=0
 	goal=["x","x","x"]
@@ -53,7 +33,6 @@ def getValue(x,y,matrix):
 		resul.append(matrix[1][0])
 		resul.append(matrix[1][1])
 		resul.append(matrix[1][2])
-		ko=duplicates(resul,"x")
 		
 		if(resul==goal):
 			matrix[x][y]="-"
