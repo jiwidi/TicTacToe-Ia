@@ -34,20 +34,24 @@ def getEmptyPos(lst):
 	elif(1 in lst and 2 in lst):
 		return 0	
 def getValue(x,y,matrix):
-	result=0
-	goal=["x","x","x"]
+	result=0;
 	resul=[]
 	matrix[x][y]="x"
 	if((matrix[0][0] =="-" or matrix[0][0] =="x") and (matrix[0][1] =="-" or matrix[0][1] =="x") and (matrix[0][2] =="-" or matrix[0][2] =="x")):
 		resul.append(matrix[0][0])
 		resul.append(matrix[0][1])
 		resul.append(matrix[0][2])
-		
-		if(resul==goal):
-			matrix[x][y]="-"
-			return[x,y]
-		
-		resul=[]	
+		if(len(duplicates(resul,"x"))==2):
+			au=getEmptyPos(duplicates(result,"x"))
+			if(au==0):
+				matrix[x][y]="-"
+				return [0,0]
+			elif(au==1):
+				matrix[x][y]="-"
+				return [0,1]
+			elif(au==2):
+				matrix[x][y]="-"
+				return [0,2]
 		result+=1
 	if((matrix[1][0] =="-" or matrix[1][0] =="x") and (matrix[1][1] =="-" or matrix[1][1] =="x") and (matrix[1][2] =="-" or matrix[1][2] =="x")):
 		resul.append(matrix[1][0])
@@ -55,71 +59,114 @@ def getValue(x,y,matrix):
 		resul.append(matrix[1][2])
 		ko=duplicates(resul,"x")
 		
-		if(resul==goal):
-			matrix[x][y]="-"
-			return[x,y]
-			
+		if(len(duplicates(resul,"x"))==2):
+			au=getEmptyPos(duplicates(resul,"x"))
+			if(au==0):
+				matrix[x][y]="-"
+				return [1,0]
+			if(au==1):
+				matrix[x][y]="-"
+				return [1,1]
+			if(au==2):
+				matrix[x][y]="-"
+				return [1,2]
 		resul=[]
 		result+=1
 	if((matrix[2][0] =="-" or matrix[2][0] =="x") and (matrix[2][1] =="-" or matrix[2][1] =="x") and (matrix[2][2] =="-" or matrix[2][2] =="x")):
 		resul.append(matrix[2][0])
 		resul.append(matrix[2][1])
 		resul.append(matrix[2][2])
-		if(resul==goal):
-			matrix[x][y]="-"
-			return[x,y]
-		
-		resul=[]	
+		if(len(duplicates(resul,"x"))==2):
+			au=getEmptyPos(duplicates(resul,"x"))
+			if(au==0):
+				matrix[x][y]="-"
+				return [2,0]
+			if(au==1):
+				matrix[x][y]="-"
+				return [2,1]
+			if(au==2):
+				matrix[x][y]="-"
+				return [2,2]
 		result+=1
 	if((matrix[0][0] =="-" or matrix[0][0] =="x") and (matrix[1][0] =="-" or matrix[1][0] =="x") and (matrix[2][0] =="-" or matrix[2][0] =="x")):
 		resul.append(matrix[0][0])
 		resul.append(matrix[1][0])
 		resul.append(matrix[2][0])
-		if(resul==goal):
-			matrix[x][y]="-"
-			return[x,y]
-		
-		resul=[]	
+		if(len(duplicates(resul,"x"))==2):
+			au=getEmptyPos(duplicates(resul,"x"))
+			if(au==0):
+				matrix[x][y]="-"
+				return [0,0]
+			if(au==1):
+				matrix[x][y]="-"
+				return [1,0]
+			if(au==2):
+				matrix[x][y]="-"
+				return [2,0]
 		result+=1
 	if((matrix[0][1] =="-" or matrix[0][1] =="x") and (matrix[1][1] =="-" or matrix[1][1] =="x") and (matrix[2][1] =="-" or matrix[2][1] =="x")):
 		resul.append(matrix[0][1])
 		resul.append(matrix[1][1])
 		resul.append(matrix[2][1])
-		if(resul==goal):
-			matrix[x][y]="-"
-			return[x,y]
-		
-		resul=[]	
+		if(len(duplicates(resul,"x"))==2):
+			au=getEmptyPos(duplicates(resul,"x"))
+			if(au==0):
+				matrix[x][y]="-"
+				return [0,1]
+			if(au==1):
+				matrix[x][y]="-"
+				return [1,1]
+			if(au==2):
+				matrix[x][y]="-"
+				return [2,1]
 		result+=1
 	if((matrix[0][2] =="-" or matrix[0][2] =="x") and (matrix[1][2] =="-" or matrix[1][2] =="x") and (matrix[2][2] =="-" or matrix[2][2] =="x")):
 		resul.append(matrix[0][2])
 		resul.append(matrix[1][2])
 		resul.append(matrix[2][2])
-		if(resul==goal):
-			matrix[x][y]="-"
-			return[x,y]
-		
-		resul=[]	
+		if(len(duplicates(resul,"x"))==2):
+			au=getEmptyPos(duplicates(resul,"x"))
+			if(au==0):
+				matrix[x][y]="-"
+				return [0,2]
+			if(au==1):
+				matrix[x][y]="-"
+				return [1,2]
+			if(au==2):
+				matrix[x][y]="-"
+				return [2,2]
 		result+=1
 	if((matrix[0][0] =="-" or matrix[0][0] =="x") and (matrix[1][1] =="-" or matrix[1][1] =="x") and (matrix[2][2] =="-" or matrix[2][2] =="x")):
 		resul.append(matrix[0][0])
 		resul.append(matrix[1][1])
 		resul.append(matrix[2][2])
-		if(resul==goal):
-			matrix[x][y]="-"
-			return[x,y]
-		
-		resul=[]	
+		if(len(duplicates(resul,"x"))==2):
+			au=getEmptyPos(duplicates(resul,"x"))
+			if(au==0):
+				matrix[x][y]="-"
+				return [0,0]
+			if(au==1):
+				matrix[x][y]="-"
+				return [1,1]
+			if(au==2):
+				matrix[x][y]="-"
+				return [2,2]
 		result+=1
 	if((matrix[2][0] =="-" or matrix[2][0] =="x") and (matrix[1][1] =="-" or matrix[1][1] =="x") and (matrix[0][2] =="-" or matrix[0][2] =="x")):
 		resul.append(matrix[2][0])
 		resul.append(matrix[1][1])
 		resul.append(matrix[0][2])
-		if(resul==goal):
-			matrix[x][y]="-"
-			return[x,y]
-		
-		resul=[]
+		if(len(duplicates(resul,"x"))==2):
+			au=getEmptyPos(duplicates(resul,"x"))
+			if(au==0):
+				matrix[x][y]="-"
+				return [2,0]
+			if(au==1):
+				matrix[x][y]="-"
+				return [1,1]
+			if(au==2):
+				matrix[x][y]="-"
+				return [0,2]
 		result+=1
 	matrix[x][y]="-"	
 
@@ -136,9 +183,7 @@ def analyzeMatrix(matrix):
 			aux2+=1
 			if(va=="-"):
 				if(type(getValue(aux1,aux2,matrix)) is list):
-					print("sol")
 					k=getValue(aux1,aux2,matrix)
-					end=True
 					return [k[0],k[1]]
 				elif(getValue(aux1,aux2,matrix)>max):
 					max=getValue(aux1,aux2,matrix)
